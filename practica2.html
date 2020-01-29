@@ -1,0 +1,90 @@
+<!DOCTYPE html> 
+<html>
+ 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Mi primera página</title> 
+    <link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />
+    <link rel="stylesheet" href="css/jquery.jquery.mobile.structure-1.4.5.min.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.min.css" />
+    <script src="css/jquery-1.7.2.min.js"></script>
+    <script src="css/jquery.mobile-1.1.0.min.js"></script>
+
+    <link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+
+    </head>
+    
+
+
+    
+    <body>
+        <div id="formulario1" data-role="page" data-theme="a">
+            <div data-role="header"><h1>Formularios</h1>
+            </div>
+            <div data-role="content">
+                <form  data-ajax="false">
+                    <label for="usuario">Nombre:<span>*</span></label>
+                    <input type="text" name="text-basic" id="usuario" value="" placeholder="Usuario">
+                    <label for="email">Correo:<span>*</span></label>
+                    <input type="Email" id="email" name="email" placeholder="Email">
+
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <legend>escolaridad:</legend>
+                        <label for="soltero">secundaria</label>
+                        <input type="checkbox" data-theme="c" id="soltero" value="soltero">
+                        <label for="casado">bachillerato</label>
+                        <input type="checkbox" id="casado" data-theme="c" value="casado">
+                        <label for="unionlibre">universidad</label>
+                        <input type="checkbox" id="unionlibre" value="unionlibre" data-theme="c">
+                    </fieldset>
+
+                    <fieldset data-role="controlgroup">
+                        <legend>Sexo:</legend>
+                        <label for="male">Masculino</label>
+                        <input type="radio" name="gender" id="male" value="male" data-theme="c">
+                        <label for="female">Femenino</label>
+                        <input type="radio" name="gender" id="female" value="female" data-theme="c">
+                        <label for="sd">Sin definir</label>
+                        <input type="radio" name="gender" id="sd" value="sd" data-theme="c">
+                    </fieldset>
+                    
+
+            </div>
+                  <button type="submit"  value="Enviar" data-theme="e" id="Enviar">Enviar</button>
+
+                    </form>
+
+           
+            <div data-role="footer">
+            	<div data-role="navbar">
+	<ul>
+		<li><a href="index.html" style="color: black;" data-theme="d">Cancelar</a></li>
+		<li><a href="practica2.html" style="color: black;" data-theme="d">Registrarse</a></li>
+	</ul>
+            </div></div>
+
+<script type="text/javascript">
+window.onload = function(){
+   document.getElementById('Enviar').onclick = function(e){
+    us=document.getElementById("usuario").value;
+    cont=document.getElementById("email").value;
+        if (!us || !cont) {
+                alert("ingresa un usuario o correo");
+        }else{
+            alert("Bienvenido "+us);
+       alert(" Gracias por registrarte");
+       location("mensaje.html");
+        }
+       return false;
+   }
+}
+
+    </script>
+</body>
+</html>
